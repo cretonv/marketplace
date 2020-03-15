@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import {Button, Checkbox, Form, Input} from "antd";
 import {withAuthorization} from "../authorization";
 import {withFirebase} from "./firebase";
+import * as ROUTES from "../constants/Routes";
+import {Link} from "react-router-dom";
 
 const layout = {
     labelCol: {
@@ -22,6 +24,7 @@ class Signup extends Component {
 
     render() {
         const res = values => {
+            console.log(values)
             this.props.firebase.doCreateUserWithEmailAndPassword(values.user.email, values.password)
             //console.log(this.props.firebase.doCreateUserWithEmailAndPassword)
         };
@@ -51,10 +54,11 @@ class Signup extends Component {
 
                     <Form.Item {...tailLayout}>
                         <Button type="primary" htmlType="submit">
-                            Creat account
+                            Créer un compte
                         </Button>
                     </Form.Item>
                 </Form>
+                <div> {this.props.firebase.auth.currentUser ? "OUIIIIII" : ""}</div>
             </div>
         )
     }

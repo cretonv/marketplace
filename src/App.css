@@ -25,6 +25,7 @@
 
     /* Code optionnel */
     margin-top: 30px;
+    margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
     display: inline-block;
@@ -78,4 +79,16 @@
 
 .text_button {
     color: white;
+}
+
+.cardContainer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.productCard {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }

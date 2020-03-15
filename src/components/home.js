@@ -4,6 +4,7 @@ import {withAuthorization} from "../authorization";
 import {withFirebase} from "./firebase";
 import {Link} from "react-router-dom"
 import * as ROUTES from "../constants/Routes"
+import ProductCard from "./card";
 
 class Home extends Component {
 
@@ -22,6 +23,7 @@ class Home extends Component {
                             <Link className={"text_button"} to={ROUTES.SIGNIN}>Déconnexion</Link>
                         </div>
                     </div>
+                    <ProductCard/>
                 </div>
             )
         } else {

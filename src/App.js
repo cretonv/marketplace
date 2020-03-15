@@ -39,20 +39,20 @@ function App(){
             <FirebaseContext.Provider value={firebase}>
                 <AuthorizationProvider>
                     <Routeur>
-                        <Layout>
-                            <Navigation/>
+                        <Layout data-testid={'layout_div'}>
+                            <Navigation data-testid={'navigation_component'}/>
                             <Content style={{padding: '10px 30px'}}>
                                 <Route exact path={ROUTES.LANDING}>
-                                    <Home/>
+                                    <Home data-testid={'home_component'}/>
                                 </Route>
                                 <Route exact path={ROUTES.SIGNIN}>
-                                    <Signin/>
+                                    <Signin data-testid={'signin_component'}/>
                                 </Route>
                                 <Route exact path={ROUTES.SIGNUP}>
-                                    <Signup/>
+                                    <Signup data-testid={'signup_component'}/>
                                 </Route>
                                 <Route exact path={ROUTES.PANIER}>
-                                    <Panier/>
+                                    <Panier data-testid={'panier_component'}/>
                                 </Route>
                             </Content>
                             <Footer>
