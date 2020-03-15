@@ -1,1 +1,81 @@
 @import '~antd/dist/antd.css';
+
+.home_page_title {
+    text-align: center;
+    font-size: 35px;
+    color: #00afe3;
+}
+
+.intro_site {
+    text-align: center;
+    font-size: 16px;
+}
+
+.home_logo {
+    height: 280px;
+    width: 280px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Bouton */
+.deco_button {
+
+    /* Code optionnel */
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    cursor: pointer;
+    /* Fin du Code Optionnel */
+
+    padding: 20px 30px;
+    background-color: #1391da;
+    border-radius: 3px;
+    text-decoration: none;
+    text-transform:uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    -webkit-box-shadow: 0px 7px 0px #0F79B6, 0px 11px 16px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 7px 0px #0F79B6, 0px 11px 16px 0px rgba(0,0,0,0.5);
+    -o-box-shadow: 0px 7px 0px #0F79B6, 0px 11px 16px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 7px 0px #0F79B6, 0px 11px 16px 0px rgba(0,0,0,0.5);
+    -webkit-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
+}
+
+/* Bouton au survol */
+.deco_button:hover {
+    position: relative;
+    top: 2px;
+    -webkit-box-shadow: 0px 5px 0px #0F79B6, 0px 7px 7px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 5px 0px #0F79B6, 0px 7px 7px 0px rgba(0,0,0,0.5);
+    -o-box-shadow: 0px 5px 0px #0F79B6, 0px 7px 7px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 5px 0px #0F79B6, 0px 7px 7px 0px rgba(0,0,0,0.5);
+}
+
+/* Bouton au clic */
+.deco_button:active {
+    position: relative;
+    top: 4px;
+    -webkit-box-shadow: 0px 2px 0px #0F79B6, 0px 3px 2px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 2px 0px #0F79B6, 0px 3px 2px 0px rgba(0,0,0,0.5);
+    -o-box-shadow: 0px 2px 0px #0F79B6, 0px 3px 2px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 0px #0F79B6, 0px 3px 2px 0px rgba(0,0,0,0.5);
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text_button {
+    color: white;
+}

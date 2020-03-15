@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
-import { Form, Input, Button, Checkbox } from 'antd'
+import { Form, Input, Button} from 'antd'
 import {withAuthorization} from "../authorization";
 import {withFirebase} from "./firebase";
+import {Link} from "react-router-dom"
+import * as ROUTES from "../constants/Routes"
 
 const layout = {
     labelCol: {
@@ -22,8 +24,10 @@ class Signin extends Component {
 
     render() {
         const res = values => {
-            this.props.firebase.doSignInWithEmailAndPassword(values.user.email, values.password)
-            //console.log(this.props.firebase.doCreateUserWithEmailAndPassword)
+            console.log(values)
+            /*console.log(values.email)
+            console.log(values.password)*/
+            this.props.firebase.doSignInWithEmailAndPassword(values.email, values.password)
         };
 
         return(
@@ -37,7 +41,7 @@ class Signin extends Component {
                     }}
                     onFinish={res}
                 >
-                    <Form.Item name={['user', 'email']} label="Email" rules={[{required: true, type: 'email' }]}>
+                    <Form.Item name='email' label="Email" rules={[{required: true, type: 'email' }]}>
                         <Input />
                     </Form.Item>
 
@@ -53,8 +57,11 @@ class Signin extends Component {
                         <Checkbox>Remember me</Checkbox>
                     </Form.Item>*/}
                     <Form.Item {...tailLayout}>
-                        <Button type="primary" htmlType="submit" onClick={this.props.isLogin? "" : this.props.toLogIn}>
-                            Submit
+                        {/*<Button type="primary" htmlType="submit" onClick={this.props.isLogin? "" : this.props.toLogIn}>
+                            <Link to={ROUTES.LANDING}> Submit</Link>
+                        </Button>*/}
+                        <Button type="primary" htmlType="submit" onClick={this.props.firebase.auth.currentUser? "" : res}>
+                            <Link to={ROUTES.LANDING}> Submit</Link>
                         </Button>
                     </Form.Item>
                 </Form>

@@ -22,8 +22,10 @@ class Firebase {
         this.auth.createUserWithEmailAndPassword(email, password);
 
     doSignInWithEmailAndPassword = (email, password) => {
+        console.log(firebase.auth().currentUser)
         this.auth.signInWithEmailAndPassword(email, password);
         var user = firebase.auth().currentUser;
+        console.log(user)
         console.log(user.email)
         /*if (user) {
             console.log(user.email)

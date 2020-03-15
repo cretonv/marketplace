@@ -20,6 +20,7 @@ export const withAuthorization = (MyComponent) => {
 
 class AuthorizationProvider extends Component {
     state = {
+        actual_page: "home",
         isLogin: false,
         toLogIn: () => {this.setState({isLogin: true})},
         toLogOut: () => {this.setState({isLogin: false})}
